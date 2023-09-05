@@ -1,0 +1,110 @@
+<html>
+<title>credit card form</title>
+
+<head>
+  <h1 align="center"><b>The credit card form</b></h1>
+  <style>
+    h2 {
+      font-size: 15px;
+    }
+  </style>
+  <style>
+    
+    form {
+      width: 30%;
+      height: 50%;
+      margin: 0 auto;
+      border: 3px solid black;
+      padding: 10px;
+      background-color: #6ae8fe;
+      background-image: url('download.jpg');
+      background-size: cover;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    input[type=password] {
+      border: 2px solid #09f324;
+      padding: 10px;
+      width: 100%;
+    }
+    
+
+    .form-control {
+      border: 2px solid #09f324;
+      padding: 10px;
+      width: 100%;
+    }
+    input {
+      width: 100%;
+      
+      padding: 10px;
+      border: 2px solid rgb(33, 9, 244);
+    }
+    input:valid,
+text:valid{
+  border-color: rgb(37, 98, 5);
+}
+
+input:invalid,
+text:invalid {
+  border-color: red;
+}
+
+    input[type="button"] {
+      width: 20%;
+      background-color: #09ee23;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      float:right;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    input[type=button]:hover {
+      background-color: #45a049;
+    }
+
+     
+
+    #cvv {
+      width: 20%;
+    }
+
+    #expiration-date {
+      width: 35%
+    }
+  </style>
+</head>
+
+<body>
+  <form >
+    <div class="form-group">
+      <label for="name">Card Holder Name*</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required="name"><br>
+      <br>
+      <label for="card-number">Card Number*</label>
+      <input type="text" class="form-control" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX"
+        maxlength="16" required="card-number" pattern="[0-9]{16}">
+        <span class="error"></span><br>
+        <br>
+      <label for="userPass">PIN:</label>
+      <input name="password" type="password" id="numeric" inputmode="numeric" maxlength="4" placeholder="PIN"
+        pattern="[0-9]{4}" required="Number">
+        <span class="error"></span><br>
+        <br>
+      <label for="expiration-date">Expiration Date*</label>
+      <input type="month" class="form-control" id="expiration-date" name="expiration-date" min="2023-06" max="2028-06"
+        value="yyyy-mm" require="expiration-date" required>
+      <label for="cvv">CVV</label>
+      <input type="text" class="form-control" id="cvv" name="cvv" maxlength="3" placeholder="123" required pattern="[0-9]{3}">
+    </div>
+    <input type="button" value="submit" >         
+  </form>
+  
+</body>
+
+</html>
